@@ -14,7 +14,7 @@ class SettingsDetailApi(APIView):
     permission_classes = [AllowAny]
 
     class OutputSerializer(serializers.Serializer):
-        id = serializers.IntegerField(required=True)
+        id = serializers.CharField(required=True)
         options = serializers.JSONField(required=True)
 
     def get(self, request):
