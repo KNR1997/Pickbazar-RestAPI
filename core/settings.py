@@ -106,6 +106,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3003",
     "http://localhost:3006",
+    "https://pickbazar-admin-lnfrpljzw-kethakas-projects.vercel.app"
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -131,13 +132,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+# if DEBUG:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 DATABASE_URL = config("DATABASE_URL", cast=str, default="")
 if DATABASE_URL:
