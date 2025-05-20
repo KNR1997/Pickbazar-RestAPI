@@ -138,15 +138,15 @@ if DEBUG:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-else:
-    DATABASE_URL = config("DATABASE_URL", cast=str, default="")
-    if DATABASE_URL:
-        import dj_database_url
-        DATABASES = {
-            "default": dj_database_url.config(
-                default=DATABASE_URL,
-            )
-        }
+
+DATABASE_URL = config("DATABASE_URL", cast=str, default="")
+if DATABASE_URL:
+    import dj_database_url
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=DATABASE_URL,
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
