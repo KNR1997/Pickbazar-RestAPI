@@ -106,7 +106,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3003",
     "http://localhost:3006",
-    "https://pickbazar-admin-lnfrpljzw-kethakas-projects.vercel.app"
+    "https://pickbazar-admin-steel.vercel.app"
 ]
 
 ROOT_URLCONF = 'core.urls'
